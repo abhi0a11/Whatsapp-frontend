@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
@@ -18,7 +17,7 @@ const socket = io(process.env.REACT_APP_API_ENDPOINT.split("/api/v1")[0]);
 function App() {
   //const [connected, setConnected] = useState(false);
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.user);
+  const { user } = useSelector(state => state.user);
   const { token } = user;
 
   return (

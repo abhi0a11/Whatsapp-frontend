@@ -9,7 +9,7 @@ import { loginUser } from "../../features/userSlice";
 export default function RegisterForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { status, error } = useSelector((state) => state.user);
+  const { status, error } = useSelector(state => state.user);
   const {
     register,
     handleSubmit,
@@ -17,7 +17,7 @@ export default function RegisterForm() {
   } = useForm({
     resolver: yupResolver(signInSchema),
   });
-  const onSubmit = async (values) => {
+  const onSubmit = async values => {
     let res = await dispatch(loginUser({ ...values }));
     console.log(res);
     if (res?.payload?.user) {
