@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import dotenv from "dotenv";
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,6 +8,9 @@ import {
 } from "react-router-dom";
 import { io } from "socket.io-client";
 import SocketContext from "./context/SocketContext";
+
+dotenv.config();
+
 //Pages
 import Home from "./pages/home";
 import Login from "./pages/login";
